@@ -18,3 +18,7 @@ and setup with /var/www/html mapped to a zend framework 2 application.
 
 Optionally you may map the ip to a host name in your /etc/hosts file,
 for example http://local.exmaple.com.
+
+## More...
+* [ZF2
+Documentation](http://zf2.readthedocs.org/en/latest/index.html#userguide)
