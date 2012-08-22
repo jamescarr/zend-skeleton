@@ -26,21 +26,23 @@ define apache::vhost::proxy (
     $servername    = '',
     $serveraliases = '',
     $ssl           = false,
-    $vhost_name    = '*'
+    $vhost_name    = '*',
+    $no_proxy_uris = []
   ) {
 
   include apache
+  include apache::proxy
 
   $apache_name = $apache::params::apache_name
   $ssl_path = $apache::params::ssl_path
   $srvname = $name
 
   if $ssl == true {
-    include apache::ssl
+    include apache::mod::ssl
   }
 
-  file { "${priority}-${name}":
-    path    => "${apache::params::vdir}/${priority}-${name}",
+  file { "${priority}-${name}.conf":
+    path    => "${apache::params::vdir}/${priority}-${name}.conf",
     content => template($template),
     owner   => 'root',
     group   => 'root',

@@ -19,12 +19,12 @@ class apache_server {
   class {'apache':
   }
 
-  class { 'apache::php':
+  class { 'apache::mod::php':
   }
   apache::vhost { 'my.example.com':
     priority        => '1',
     port            => '80',
-    docroot         => '/var/www/html/',
+    docroot         => '/var/www/html/public',
     serveraliases   => ['example.com',],
   }
 }

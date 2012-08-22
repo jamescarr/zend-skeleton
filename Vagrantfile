@@ -11,7 +11,8 @@ Vagrant::Config.run do |config|
     puppet.module_path = "puppet/modules"
   end
   
+  config.vm.host_name = 'zenddemo'
   config.vm.network :hostonly, "192.168.50.4"
   config.vm.forward_port 80, 8080
-  config.vm.share_folder "www", "/var/www/html", "."
+  config.vm.share_folder "www", "/var/www/html/", "./application"
 end

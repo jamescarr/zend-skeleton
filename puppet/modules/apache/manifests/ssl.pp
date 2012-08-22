@@ -13,22 +13,6 @@
 # Sample Usage:
 #
 class apache::ssl {
-
-  include apache
-
-  case $::operatingsystem {
-    'centos', 'fedora', 'redhat', 'scientific': {
-      package { 'apache_ssl_package':
-        ensure  => installed,
-        name    => $apache::params::ssl_package,
-        require => Package['httpd'],
-      }
-    }
-    'ubuntu', 'debian': {
-      a2mod { 'ssl': ensure => present, }
-    }
-    default: {
-      fail( "${::operatingsystem} not defined in apache::ssl.")
-    }
-  }
+  warning('apache::ssl is deprecated; please use apache::mod::ssl')
+  include apache::mod::ssl
 }

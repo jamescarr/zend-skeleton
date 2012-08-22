@@ -12,6 +12,7 @@ describe 'apache::vhost', :type => :define do
     :auth          => false,
     :docroot       => 'path/to/docroot',
     :options       => 'Indexes FollowSymLinks MultiViews',
+    :override      => 'None',
     :port          => '80',
     :priority      => '25',
     :redirect_ssl  => false,
@@ -19,15 +20,18 @@ describe 'apache::vhost', :type => :define do
     :servername    => '',
     :ssl           => true,
     :template      => 'apache/vhost-default.conf.erb',
-    :vhost_name    => '*'
+    :vhost_name    => '*',
+    :ensure        => 'present'
     }
   end
 
   [{
       :apache_name   => 'httpd',
       :docroot       => 'path/to/docroot',
+      :override      => ['Options', 'FileInfo'],
       :port          => '80',
       :priority      => '25',
+      :serveradmin   => 'serveradmin@puppet',
       :ssl           => false,
       :template      => 'apache/vhost-default.conf.erb',
    },
@@ -58,7 +62,6 @@ describe 'apache::vhost', :type => :define do
           'owner'     => 'root',
           'group'     => 'root',
           'mode'      => '0755',
-          'require'   => 'Package[httpd]',
           'notify'    => 'Service[httpd]'
         })
       }
