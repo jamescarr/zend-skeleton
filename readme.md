@@ -11,7 +11,7 @@ and setup with /var/www/html mapped to a zend framework 2 application.
 ## Using
 
 - install [vagrant](http://www.vagrantup.com)
-- clone this repo
+- clone this repo (git clone git@github.com:jamescarr/zend-skeleton.git --recursive)
 - type vagrant up
 - navigate to http://192.168.50.4 
 - profit!
