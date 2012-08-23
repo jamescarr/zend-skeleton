@@ -15,6 +15,7 @@ Tutorial](http://zf2.readthedocs.org/en/latest/user-guide/overview.html).
 
 - install [vagrant](http://www.vagrantup.com)
 - clone this repo 
+
 ```bash
 
 git clone git@github.com:jamescarr/zend-skeleton.git --recursive)
