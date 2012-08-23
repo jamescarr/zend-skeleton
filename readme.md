@@ -14,7 +14,10 @@ Tutorial](http://zf2.readthedocs.org/en/latest/user-guide/overview.html).
 ## Using
 
 - install [vagrant](http://www.vagrantup.com)
-- clone this repo (git clone git@github.com:jamescarr/zend-skeleton.git --recursive)
+- clone this repo 
+  ```bash
+  git clone git@github.com:jamescarr/zend-skeleton.git --recursive)
+  ```
 - type vagrant up
 - navigate to http://192.168.50.4/
 - profit!
