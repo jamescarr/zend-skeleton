@@ -13,7 +13,7 @@ and setup with /var/www/html mapped to a zend framework 2 application.
 - install [vagrant](http://www.vagrantup.com)
 - clone this repo (git clone git@github.com:jamescarr/zend-skeleton.git --recursive)
 - type vagrant up
-- navigate to http://192.168.50.4 
+- navigate to http://192.168.50.4/album
 - profit!
 
 Optionally you may map the ip to a host name in your /etc/hosts file,
