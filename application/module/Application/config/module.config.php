@@ -69,7 +69,7 @@ return array(
     ),
     'controllers' => array(
         'invokables' => array(
-            'Application\Controller\Index' => 'Application\Controller\IndexController'
+            'Application\Controller\Index' => 'Album\Controller\AlbumController'
         ),
     ),
     'view_manager' => array(
