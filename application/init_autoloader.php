@@ -17,12 +17,12 @@
  */
 
 // Composer autoloading
-if (file_exists('vendor/autoload.php')) {
-    $loader = include 'vendor/autoload.php';
+if (file_exists(__DIR__ . '/vendor/autoload.php')) {
+    $loader = include __DIR__ . '/vendor/autoload.php';
 }
 
 // Support for ZF2_PATH environment variable or git submodule
-if (($zf2Path = getenv('ZF2_PATH') ?: (is_dir('vendor/ZF2/library') ? 'vendor/ZF2/library' : false)) !== false) {
+if (($zf2Path = getenv('ZF2_PATH') ?: (is_dir('vendor/zendframework/zendframework/library') ? 'vendor/zendframework/library' : false)) !== false) {
     if (isset($loader)) {
         $loader->add('Zend', $zf2Path . '/Zend');
     } else {
@@ -38,3 +38,5 @@ if (($zf2Path = getenv('ZF2_PATH') ?: (is_dir('vendor/ZF2/library') ? 'vendor/ZF
 if (!class_exists('Zend\Loader\AutoloaderFactory')) {
     throw new RuntimeException('Unable to load ZF2. Run `php composer.phar install` or define a ZF2_PATH environment variable.');
 }
+
+return $loader;
