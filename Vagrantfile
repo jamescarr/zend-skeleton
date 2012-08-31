@@ -13,6 +13,6 @@ Vagrant::Config.run do |config|
   
   config.vm.host_name = 'zenddemo'
   config.vm.network :hostonly, "192.168.50.4"
-  config.vm.share_folder "www", "/var/www/html/", "/home/jamescarr/Perforce/james.r.carr_caprica_james_7951/web/public"
+  config.vm.share_folder "www", "/var/www/html/", "./application"
   config.vm.share_folder "artifacts", "/tmp/share", "./share"
 end
