@@ -1,5 +1,5 @@
 <?php
-namespace Test\Album;
+namespace Album;
 
 use Test\Foo\Bar\Baz\AbstractDaoTestCase;
 
