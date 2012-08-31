@@ -1,7 +1,5 @@
 <?php
-namespace Album;
-
-use Test\Foo\Bar\Baz\AbstractDaoTestCase;
+namespace Album\Model;
 
 
 class AlbumTest extends AbstractDaoTestCase{

@@ -13,4 +13,4 @@
 error_reporting(E_ALL);
 
 $loader = require __DIR__.'/../init_autoloader.php';
-$loader->add('Test', __DIR__ . '/../');
+$loader->add('Album\\', __DIR__ . '');
