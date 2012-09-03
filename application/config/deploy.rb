@@ -17,10 +17,10 @@ role :app, site                      # Your HTTP server, Apache/etc
 namespace :composer do
   desc "run composer install and ensure all dependencies are installed"
   task :install do
-      run "ln -s #{deploy_to}vendor #{deploy_to}current/vendor"
+      run "ln -s #{deploy_to}/vendor #{deploy_to}/current/vendor"
       run "cd #{current_path} && php composer.phar install"
   end
 end
 
-before "deploy:symlink", "composer:install"
+after "deploy:finalize_update", "composer:install"
 
