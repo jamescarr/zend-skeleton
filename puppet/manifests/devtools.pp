@@ -5,5 +5,10 @@ class devtools {
   package {'vim-enhanced':
     ensure => installed
   }
+  package {'git':
+
+    ensure => installed
+  }
+
 }
 

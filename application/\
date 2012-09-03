@@ -1,9 +1,0 @@
-<?php
-namespace Album\Model;
-
-
-class AlbumTest extends AbstractDaoTestCase{
-  public function testThisShit(){
-    $this->assertTrue(true);
-  }
-}

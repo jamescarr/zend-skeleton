@@ -34,6 +34,22 @@ sudo echo '192.1168.50.4 local.example.com' >> /etc/hosts
 
 ```
 
+## Multiple Environments
+* my.example.com is for local dev (make changes and see the result right
+away)
+* staging.example.com is for testing cap staging deploys
+* prod.example.com is for testing prod deploys
+
+
+## Dependencies
+This project has the following external dependencies 
+
+### Gems
+* capstrano - for awesome deployments
+* capistrano-ext - for multiple environments
+* railsless-deploy - no rails plz. kthxbye.
+
+
 ## More...
 * [ZF2
 Documentation](http://zf2.readthedocs.org/en/latest/index.html#userguide)
