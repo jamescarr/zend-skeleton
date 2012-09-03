@@ -12,7 +12,7 @@ set :use_sudo, false
 set :deploy_subdir, "application"
 ssh_options[:forward_agent] = true
 
-#
+set :copy_exclude, ["config/deploy*", "Capfile", "test", "README.md"]
 
 namespace :composer do
   desc "run composer install and ensure all dependencies are installed"
