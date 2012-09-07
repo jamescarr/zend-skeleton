@@ -30,7 +30,7 @@ for example http://local.example.com. You can do this by running
 something like:
 
 ```bash
-sudo echo '192.1168.50.4 local.example.com' >> /etc/hosts
+sudo echo '192.1168.50.4 my.example.com' >> /etc/hosts
 
 ```
 
