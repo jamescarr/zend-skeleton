@@ -26,16 +26,16 @@ git clone git@github.com:jamescarr/zend-skeleton.git)
 - profit!
 
 Optionally you may map the ip to a host name in your /etc/hosts file,
-for example http://local.example.com. You can do this by running
+for example http://my.example.com. You can do this by running
 something like:
 
 ```bash
-sudo echo '192.1168.50.4 local.example.com' >> /etc/hosts
+sudo echo '192.1168.50.4 my.example.com' >> /etc/hosts
 
 ```
 
 ## Multiple Environments
-* my.example.com is for local dev (make changes and see the result right
+* my.example.com is for local development (make changes and see the result right
 away)
 * staging.example.com is for testing cap staging deploys
 * prod.example.com is for testing prod deploys
@@ -48,7 +48,7 @@ This project has the following external dependencies
 * capstrano - for awesome deployments
 * capistrano-ext - for multiple environments
 * railsless-deploy - no rails plz. kthxbye.
-
+* guard-php - for awesome test running (more on this later)
 
 ## More...
 * [ZF2

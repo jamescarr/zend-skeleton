@@ -8,7 +8,7 @@ class AlbumTest extends \PHPUnit_Framework_TestCase{
 
   public function setUp(){
   }
-  public function testThisShit(){
+  public function testThisStuff(){
     $album = new Album();
     $album->exchangeArray(array('title'=> 'Mo Thug'));
     $this->assertEquals('Mo Thug', $album->title);

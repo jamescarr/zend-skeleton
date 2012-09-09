@@ -9,11 +9,11 @@
     "homepage": "http://framework.zend.com/",
     "require": {
         "php": ">=5.3.3",
-        "zendframework/zendframework": "2.0.0rc6@dev"
+        "zendframework/zendframework": "2.0.0",
+        "doctrine/common":"2.2.3"
     },
     "autoload": {
       "psr-0": {
-        "Zend":"vendor/zendframework/zendframework/library/Zend",
         "Album":"module/Album/src"
       }
     }

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="zend-skeleton" default="build">
+  <target name="gather-dependencies">
+    <exec executable="php" passthru="true" checkreturn="true">
+      <arg value="composer.phar"/>
+      <arg value="self-update"/>
+    </exec>
+    <exec executable="php" passthru="true" checkreturn="true">
+      <arg value="composer.phar"/>
+      <arg value="install"/>
+      <arg value="--dev"/>
+    </exec>
+  </target>
+  <target name="test">
+    <exec executable="php"  passthru="true" checkreturn="true">
+      <arg value="vendor/bin/phpunit.php"/>
+      <arg value="-c"/>
+      <arg value="test/phpunit.xml.dist"/>
+      <arg value="--log-junit"/>
+      <arg value="reports/tests/unit.tests.xml"/>
+    </exec>
+  </target>
+
+  <target name="build" depends="gather-dependencies,test"/>
+
+</project>

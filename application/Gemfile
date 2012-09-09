@@ -1,0 +1,5 @@
+group :development do
+    gem 'guard-phpunit'
+    gem 'libnotify'
+    gem 'rb-inotify'
+end
