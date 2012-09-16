@@ -31,7 +31,13 @@ class Album{
 
     /** 
      * @Form\Type("Zend\Form\Element\Select")
-     * @Form\Options({"label":"Genre", "value_options":["Rap", "Jazz", "Alternative", "Rock"]})
+     * @Form\Options({"label":"Genre", "value_options":{
+     *      "Rap":"Rap", 
+     *      "Jazz":"Jazz", 
+     *      "Alternative":"Alternative", 
+     *      "Rock":"Rock"
+     *      }
+     * })
      */
     public $genre;
 
