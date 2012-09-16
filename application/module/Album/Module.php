@@ -30,6 +30,14 @@ class Module{
                     $table     = new AlbumTable($dbAdapter);
                     return $table;
                 },
+                'Album\Model\GenreTable' => function($sm){
+                    return new \Album\Model\GenreTable();
+                },
+                'Album\Form\FormBuilder' => function($sm){
+                    return new \Album\Form\FormBuilder(
+                        $sm->get('Album\Model\GenreTable')
+                    );
+                }
             ),
         );
     }

@@ -5,7 +5,6 @@ namespace Album\Controller;
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
 use Album\Model\Album;
-use Zend\Form\Annotation\AnnotationBuilder;
 
 class AlbumController extends AbstractActionController{
     protected $albumTable;
@@ -16,17 +15,8 @@ class AlbumController extends AbstractActionController{
       ));
     }
     private function form(){
-      $builder = new AnnotationBuilder();
-      $form = $builder->createForm(new Album());
-      $form->add(array(
-        'name' => 'submit',
-        'attributes' => array(
-            'type'  => 'submit',
-            'value' => 'Add',
-            'id' => 'submitbutton',
-        ),  
-      ));
-      return $form;
+        $sm = $this->getServiceLocator();
+        return $sm->get('Album\Form\FormBuilder')->newForm();
     }
     public function addAction(){
       $form = $this->form();
