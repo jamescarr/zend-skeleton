@@ -29,10 +29,17 @@ class Album{
      */
     public $title;
 
+    /** 
+     * @Form\Type("Zend\Form\Element\Select")
+     * @Form\Options({"label":"Genre", "value_options":["Rap", "Jazz", "Alternative", "Rock"]})
+     */
+    public $genre;
+
     public function exchangeArray($data){
         $this->id     = (isset($data['id'])) ? $data['id'] : null;
         $this->artist = (isset($data['artist'])) ? $data['artist'] : null;
         $this->title  = (isset($data['title'])) ? $data['title'] : null;
+        $this->genre  = (isset($data['genre'])) ? $data['genre'] : null;
     }
 
     public function getArrayCopy(){

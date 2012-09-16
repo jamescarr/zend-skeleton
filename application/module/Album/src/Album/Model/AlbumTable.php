@@ -35,6 +35,7 @@ class AlbumTable extends AbstractTableGateway{
         $data = array(
             'artist' => $album->artist,
             'title'  => $album->title,
+            'genre'  => $album->genre,
         );
         $id = (int)$album->id;
         if ($id == 0) {
